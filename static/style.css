@@ -1,0 +1,222 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* General Body Styles */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 20px 20px 20px 260px; /* Top, Right, Bottom, Left - space for index */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+/* Mob Index Navigation */
+#mob-index {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  width: 220px;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+#mob-index h4 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.location-header {
+  padding: 8px 10px;
+  margin: 4px 0 0 0;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  position: relative;
+  transition: background-color 0.2s ease;
+  user-select: none; /* Prevent text selection on click */
+}
+
+.location-header:hover {
+  background-color: #e9ecef;
+}
+
+.location-header.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #2980b9;
+}
+
+.location-header::after {
+  content: "▶";
+  font-size: 10px;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%) rotate(0deg);
+  transition: transform 0.2s ease;
+}
+
+.location-header.active::after {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.mob-list-group {
+  list-style-type: none;
+  padding: 5px 0 5px 10px; /* Top, Right, Bottom, Left */
+  margin: 0;
+  display: none; /* Initially hidden */
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.mob-list-group li a {
+  display: block;
+  padding: 6px 10px;
+  text-decoration: none;
+  color: #3498db;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Mob List and Cards */
+#mob-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.mob-card {
+  background-color: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+}
+
+.mob-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mob-card h3 {
+  margin-top: 0;
+  color: #3498db;
+}
+
+.mob-details p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.mob-details strong {
+  color: #555;
+}
+
+/* Actions and Buttons */
+.mob-actions {
+  margin-top: 15px;
+  text-align: right;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.edit-btn,
+.save-btn {
+  background-color: #3498db;
+  color: white;
+}
+.edit-btn:hover,
+.save-btn:hover {
+  background-color: #2980b9;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+  margin-left: 10px;
+}
+.cancel-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Edit Form Styles */
+.edit-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.edit-form input[type="text"],
+.edit-form textarea {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.edit-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+  body {
+    padding-left: 20px;
+  }
+  #mob-index {
+    display: none;
+  }
+}
+
+.mob-list-group li a:hover {
+  background-color: #f0f8ff;
+  color: #2980b9;
+}

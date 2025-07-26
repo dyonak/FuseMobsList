@@ -1,0 +1,719 @@
+{
+    "The Progenitor": {
+        "location": "Sleeper's Tomb",
+        "synonyms": [
+            "prog"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Master of the Guard": {
+        "location": "Sleeper's Tomb",
+        "synonyms": [
+            "motg"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "The Final Arbiter": {
+        "location": "Sleeper's Tomb",
+        "synonyms": [
+            "tfa"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Velketor the Sorcerer": {
+        "location": "Velketor's Labyrinth",
+        "synonyms": [
+            "velk",
+            "velketor"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Dain Frostreaver IV": {
+        "location": "Icewell Keep",
+        "synonyms": [
+            "dain",
+            "dain frostreaver"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Wuoshi": {
+        "location": "Wakening Land",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Takish": {
+        "location": "Plane of Growth",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Tunare": {
+        "location": "Plane of Growth",
+        "synonyms": [
+            "tuna"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Zlandicar": {
+        "location": "Dragon Necropolis",
+        "synonyms": [
+            "zlandi"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Klandicar": {
+        "location": "Western Wastes",
+        "synonyms": [
+            "klandi"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Sontalak": {
+        "location": "Western Wastes",
+        "synonyms": [
+            "sont"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lord Yelinak": {
+        "location": "Skyshrine",
+        "synonyms": [
+            "yeli",
+            "yelinak"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Derakor the Vindicator": {
+        "location": "Kael Drakkel",
+        "synonyms": [
+            "vindi",
+            "derakor",
+            "big v"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Statue of Rallos Zek": {
+        "location": "Kael Drakkel",
+        "synonyms": [
+            "statue",
+            "statue of rallos zek"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "The Avatar of War": {
+        "location": "Kael Drakkel",
+        "synonyms": [
+            "aow",
+            "avatar of war"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "King Tormax": {
+        "location": "Kael Drakkel",
+        "synonyms": [
+            "kt",
+            "tormax"
+        ],
+        "track": "0",
+        "coth": "20",
+        "et": "0",
+        "ftebonus": 0,
+        "fte": ""
+    },
+    "Druushk": {
+        "location": "Veeshan's Peak",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Xygoz": {
+        "location": "Veeshan's Peak",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Hoshkar": {
+        "location": "Veeshan's Peak",
+        "synonyms": [
+            "hosh"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Phara Dar": {
+        "location": "Veeshan's Peak",
+        "synonyms": [
+            "pd"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Nexona": {
+        "location": "Veeshan's Peak",
+        "synonyms": [
+            "sexona"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Silverwing": {
+        "location": "Veeshan's Peak",
+        "synonyms": [
+            "sw"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Venril Sathir": {
+        "location": "Karnor's Castle",
+        "synonyms": [
+            "vs",
+            "venril"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Severilous": {
+        "location": "Emerald Jungle",
+        "synonyms": [
+            "severilous"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Trakanon": {
+        "location": "Sebilis",
+        "synonyms": [
+            "trak"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Gorenaire": {
+        "location": "Dreadlands",
+        "synonyms": [
+            "gore"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Magi P`Tasa": {
+        "location": "Plane of Hate",
+        "synonyms": [
+            "magi"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Innoruuk": {
+        "location": "Plane of Hate",
+        "synonyms": [
+            "inny"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Coercer T`vala": {
+        "location": "Plane of Hate",
+        "synonyms": [
+            "coercer"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lord of Loathing": {
+        "location": "Plane of Hate",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lord of Ire": {
+        "location": "Plane of Hate",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Master of Spite": {
+        "location": "Plane of Hate",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Ashenbone Broodmaster": {
+        "location": "Plane of Hate",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Mistress of Scorn": {
+        "location": "Plane of Hate",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Avatar of Abhorrence": {
+        "location": "Plane of Hate",
+        "synonyms": [
+            "aoa"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Grandmaster R`Tal": {
+        "location": "Plane of Hate",
+        "synonyms": [
+            "grandmaster"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lady Vox": {
+        "location": "Permafrost Caverns",
+        "synonyms": [
+            "vox"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Dracoliche": {
+        "location": "Feerrott",
+        "synonyms": [
+            "draco",
+            "dracoliche",
+            "A Dracoliche"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Fright": {
+        "location": "Feerrott",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Dread": {
+        "location": "Feerrott",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Terror": {
+        "location": "Feerrott",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Cazic Thule": {
+        "location": "Feerrott",
+        "synonyms": [
+            "ct",
+            "cazic"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Noble Dojorn": {
+        "location": "Plane of Sky",
+        "synonyms": [
+            "noble"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Overseer of Air": {
+        "location": "Plane of Sky",
+        "synonyms": [
+            "overseer"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "The Hand of Veeshan": {
+        "location": "Plane of Sky",
+        "synonyms": [
+            "hand",
+            "hand of veeshan"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Casalen": {
+        "location": "Temple of Veeshan",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Essedera": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "ess"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Grozzmel": {
+        "location": "Temple of Veeshan",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Krigara": {
+        "location": "Temple of Veeshan",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lepethida": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "lep"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Midayor": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "Middy"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Tavekalem": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "Tave"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Ymmeln": {
+        "location": "Temple of Veeshan",
+        "synonyms": [],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Dozekar the Cursed": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "doze",
+            "dozekar"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Gozzrem": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "gozz",
+            "Goz"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Telkorenar": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "Telk"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lendiniara the Keeper": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "ltk",
+            "Lendiniara"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Ikatiar the Venom": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "ikky",
+            "ikatiar"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Eashen of the Sky": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "eashen"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Aaryonar": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "aary"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lord Feshlak": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "fesh",
+            "feshlak"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Dagarn the Destroyer": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "dag",
+            "dagarn"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lord Kreizenn": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "kreiz",
+            "kreizenn"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lord Vyemm": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "vyemm"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lord Koi'Doken": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "koi",
+            "koidoken",
+            "lord koi"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lady Mirenilla": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "mire",
+            "mirenilla",
+            "lady m"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Vulak`Aerr": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "vulak",
+            "vulak'aerr"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Sevalak": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "sev"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Cekenar": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "cek"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Zlexak": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "zlex"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Jorlleag": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "jorl"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    },
+    "Lady Nevederia": {
+        "location": "Temple of Veeshan",
+        "synonyms": [
+            "nev",
+            "lady n",
+            "lady nev",
+            "nevederia"
+        ],
+        "track": 0,
+        "coth": 0,
+        "et": 0,
+        "ftebonus": 0
+    }
+}

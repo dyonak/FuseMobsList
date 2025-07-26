@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mob Editor</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <nav id="mob-index">
+      <!-- Mob index will be loaded here by JavaScript -->
+    </nav>
+    <div class="container">
+      <h1>Mob Database</h1>
+      <div id="mob-list">
+        <!-- Mobs will be loaded here by JavaScript -->
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mobIndexContainer = document.getElementById("mob-index");
+        const mobListContainer = document.getElementById("mob-list");
+        let allMobsData = {}; // Cache for mob data
+
+        // Function to create the display view HTML for a mob
+        const createMobView = (name, mobData) => {
+          return `
+                    <h3>${name}</h3>
+                    <div class="mob-details">
+                        <p><strong>Location:</strong> ${
+                          mobData.location || "N/A"
+                        }</p>
+                        <p><strong>FTE:</strong> <span class="editable-value">${
+                          mobData.fte ?? "N/A"
+                        }</span></p>
+                        <p><strong>Coth:</strong> <span class="editable-value">${
+                          mobData.coth ?? "N/A"
+                        }</span></p>
+                        <p><strong>Track:</strong> <span class="editable-value">${
+                          mobData.track ?? "N/A"
+                        }</span></p>
+                        <p><strong>ET:</strong> <span class="editable-value">${
+                          mobData.et ?? "N/A"
+                        }</span></p>
+                        <p><strong>Synonyms:</strong> <span class="editable-value">${
+                          (mobData.synonyms || []).join(", ") || "None"
+                        }</span></p>
+                    </div>
+                    <div class="mob-actions">
+                        <button class="edit-btn" data-mob-name="${name}">Edit</button>
+                    </div>
+                `;
+        };
+
+        // Function to create the edit form HTML for a mob
+        const createMobEditForm = (name, mobData) => {
+          return `
+                    <h3>${name}</h3>
+                    <form class="edit-form" data-mob-name="${name}">
+                        <label>FTE: <input type="text" name="fte" value="${
+                          mobData.fte ?? ""
+                        }"></label>
+                        <label>Coth: <input type="text" name="coth" value="${
+                          mobData.coth ?? ""
+                        }"></label>
+                        <label>Track: <input type="text" name="track" value="${
+                          mobData.track ?? ""
+                        }"></label>
+                        <label>ET: <input type="text" name="et" value="${
+                          mobData.et ?? ""
+                        }"></label>
+                        <label>Synonyms (comma-separated):
+                            <textarea name="synonyms">${(
+                              mobData.synonyms || []
+                            ).join(", ")}</textarea>
+                        </label>
+                        <div class="mob-actions">
+                            <button type="submit" class="save-btn">Save</button>
+                            <button type="button" class="cancel-btn">Cancel</button>
+                        </div>
+                    </form>
+                `;
+        };
+
+        // Function to render all mobs
+        const renderMobs = (mobs) => {
+          mobListContainer.innerHTML = ""; // Clear existing list
+          for (const [name, data] of Object.entries(mobs)) {
+            const mobCard = document.createElement("div");
+            mobCard.className = "mob-card";
+            mobCard.id = `mob-${name.replace(/\s+/g, "-")}`; // Create a unique ID
+            mobCard.innerHTML = createMobView(name, data);
+            mobListContainer.appendChild(mobCard);
+          }
+        };
+
+        // Function to build the side navigation index
+        const renderMobIndex = (mobs) => {
+          // 1. Group mobs by location
+          const mobsByLocation = {};
+          for (const [name, data] of Object.entries(mobs)) {
+            const location = data.location || "Uncategorized";
+            if (!mobsByLocation[location]) {
+              mobsByLocation[location] = [];
+            }
+            mobsByLocation[location].push(name);
+          }
+
+          // 2. Build the HTML
+          mobIndexContainer.innerHTML = ""; // Clear previous index
+          const title = document.createElement("h4");
+          title.textContent = "Mob Index";
+          mobIndexContainer.appendChild(title);
+
+          // Sort locations alphabetically for consistent order
+          const sortedLocations = Object.keys(mobsByLocation).sort();
+
+          for (const location of sortedLocations) {
+            const groupDiv = document.createElement("div");
+            groupDiv.className = "index-location-group";
+
+            const header = document.createElement("h5");
+            header.className = "location-header";
+            header.textContent = location;
+            groupDiv.appendChild(header);
+
+            const list = document.createElement("ul");
+            list.className = "mob-list-group"; // Initially hidden via CSS
+
+            // Sort mobs within the location alphabetically
+            mobsByLocation[location].sort();
+
+            for (const name of mobsByLocation[location]) {
+              const listItem = document.createElement("li");
+              const link = document.createElement("a");
+              const mobCardId = `mob-${name.replace(/\s+/g, "-")}`;
+              link.href = `#${mobCardId}`;
+              link.textContent = name;
+              listItem.appendChild(link);
+              list.appendChild(listItem);
+            }
+            groupDiv.appendChild(list);
+            mobIndexContainer.appendChild(groupDiv);
+          }
+        };
+
+        // Fetch initial data and render the list
+        const loadAndRenderMobs = async () => {
+          try {
+            const response = await fetch("/api/mobs");
+            if (!response.ok) throw new Error("Network response was not ok");
+            allMobsData = await response.json();
+            renderMobs(allMobsData);
+            renderMobIndex(allMobsData);
+          } catch (error) {
+            mobListContainer.innerHTML =
+              '<p class="error">Could not load mob data.</p>';
+            console.error("Fetch error:", error);
+          }
+        };
+
+        // Event delegation for handling clicks on the mob list
+        mobListContainer.addEventListener("click", async (event) => {
+          const target = event.target;
+          const mobCard = target.closest(".mob-card");
+          if (!mobCard) return;
+
+          const mobName = mobCard.id.substring(4).replace(/-/g, " ");
+
+          // Handle "Edit" button click
+          if (target.classList.contains("edit-btn")) {
+            mobCard.innerHTML = createMobEditForm(
+              mobName,
+              allMobsData[mobName]
+            );
+          }
+
+          // Handle "Cancel" button click
+          if (target.classList.contains("cancel-btn")) {
+            mobCard.innerHTML = createMobView(mobName, allMobsData[mobName]);
+          }
+        });
+
+        // Event delegation for the mob index (accordion functionality)
+        mobIndexContainer.addEventListener("click", (event) => {
+          const target = event.target;
+
+          // Check if a location header was clicked
+          if (target.classList.contains("location-header")) {
+            const currentList = target.nextElementSibling;
+            const wasActive = target.classList.contains("active");
+
+            // Deactivate all other headers and collapse their lists
+            document
+              .querySelectorAll("#mob-index .location-header")
+              .forEach((header) => {
+                if (header !== target) {
+                  header.classList.remove("active");
+                  header.nextElementSibling.style.display = "none";
+                }
+              });
+
+            // Toggle the current one
+            target.classList.toggle("active", !wasActive);
+            currentList.style.display = wasActive ? "none" : "block";
+          }
+          // Clicks on mob links <a> will be handled by the browser's default anchor behavior
+        });
+
+        // Event delegation for form submission
+        mobListContainer.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          const target = event.target;
+
+          if (target.classList.contains("edit-form")) {
+            const mobName = target.dataset.mobName;
+            const mobCard = target.closest(".mob-card");
+            const formData = new FormData(target);
+
+            const updatedData = {
+              fte: formData.get("fte"),
+              coth: formData.get("coth"),
+              track: formData.get("track"),
+              et: formData.get("et"),
+              synonyms: formData
+                .get("synonyms")
+                .split(",")
+                .map((s) => s.trim())
+                .filter(Boolean),
+            };
+
+            try {
+              const response = await fetch(
+                `/api/mobs/${encodeURIComponent(mobName)}`,
+                {
+                  method: "PUT",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(updatedData),
+                }
+              );
+              if (!response.ok) throw new Error("Failed to save data.");
+              const result = await response.json();
+              allMobsData[mobName] = result.mob; // Update local cache
+              mobCard.innerHTML = createMobView(mobName, result.mob); // Re-render the card
+            } catch (error) {
+              console.error("Save error:", error);
+              alert("Error saving mob data. Check console for details.");
+            }
+          }
+        });
+
+        // Initial load
+        loadAndRenderMobs();
+      });
+    </script>
+  </body>
+</html>
